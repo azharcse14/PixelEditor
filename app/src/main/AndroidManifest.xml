@@ -23,6 +23,7 @@
             </intent-filter>
         </activity>
         <activity
+            android:theme="@style/FullScreen"
             android:name=".MainActivity"
             android:exported="true">
 
