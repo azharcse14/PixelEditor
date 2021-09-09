@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Pixel Editor</string>
+    <string name="let_s_create_something_new">Let\'s Create something new</string>
+    <string name="image_filters">Image Filters</string>
 </resources>
