@@ -1,4 +1,4 @@
-package com.azhar.pixeleditor.View
+package com.azhar.pixeleditor.View.Activity
 
 import android.Manifest
 import android.content.pm.PackageManager

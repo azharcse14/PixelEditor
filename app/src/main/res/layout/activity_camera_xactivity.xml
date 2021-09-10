@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/black"
-    tools:context=".View.CameraXActivity">
+    tools:context=".View.Activity.CameraXActivity">
 
     <Button
         android:id="@+id/camera_capture_button"

@@ -1,14 +1,11 @@
-package com.azhar.pixeleditor.View
+package com.azhar.pixeleditor.View.Activity
 
 import android.graphics.BitmapFactory
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.azhar.pixeleditor.R
-import com.azhar.pixeleditor.databinding.ActivityCameraXactivityBinding.inflate
 import com.azhar.pixeleditor.databinding.ActivityEditImageBinding
-import com.azhar.pixeleditor.databinding.ActivityMainBinding
 
 class EditImageActivity : AppCompatActivity() {
 

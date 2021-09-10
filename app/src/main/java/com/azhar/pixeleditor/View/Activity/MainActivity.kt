@@ -1,11 +1,9 @@
-package com.azhar.pixeleditor.View
+package com.azhar.pixeleditor.View.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
-import com.azhar.pixeleditor.R
-import com.azhar.pixeleditor.databinding.ActivityEditImageBinding
 import com.azhar.pixeleditor.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
