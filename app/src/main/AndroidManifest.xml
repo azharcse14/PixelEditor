@@ -14,10 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PixelEditor" >
         <activity
-            android:name=".View.EditImageActivity"
+            android:name=".View.Activity.EditImageActivity"
             android:exported="true" />
         <activity
-            android:name=".View.CameraXActivity"
+            android:name=".View.Activity.CameraXActivity"
             android:exported="true" >
 <!--            <intent-filter>-->
 <!--                <action android:name="android.intent.action.MAIN" />-->
@@ -26,7 +26,7 @@
 <!--            </intent-filter>-->
         </activity>
         <activity
-            android:name=".View.MainActivity"
+            android:name=".View.Activity.MainActivity"
             android:exported="true"
             android:theme="@style/FullScreen" >
             <intent-filter>
