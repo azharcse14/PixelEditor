@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import androidx.lifecycle.ViewModel
+import com.azhar.pixeleditor.View.Adapter.ImageFiltersAdapter
 import com.azhar.pixeleditor.View.Utility.displayToast
 import com.azhar.pixeleditor.View.Utility.show
 import com.azhar.pixeleditor.ViewModel.EditImageViewModel
@@ -35,8 +36,24 @@ class EditImageActivity : AppCompatActivity() {
             dataState.bitmap?.let { bitmap ->
                 binding.imagePreview.setImageBitmap(bitmap)
                 binding.imagePreview.show()
+                viewModel.loadImageFilters(bitmap)
             }?:kotlin.run {
                 dataState.error?.let { error ->
+                    displayToast(error)
+                }
+            }
+        })
+
+        viewModel.imageFiltersUiState.observe(this,{
+            val imageFiltersDataState = it ?: return@observe
+            binding.imageFiltersProgressBar.visibility =
+                if(imageFiltersDataState.isLoading)View.VISIBLE else View.GONE
+            imageFiltersDataState.imageFilters?.let { imageFilters ->
+                ImageFiltersAdapter(imageFilters).also { adapter ->
+                    binding.filterRecyclerView.adapter = adapter
+                }
+            }?: kotlin.run {
+                imageFiltersDataState.error?.let { error ->
                     displayToast(error)
                 }
             }
